@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+    with args -log arm_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_tb.tcl
 
 
 ECHO가 설정되어 있지 않습니다.
@@ -13,457 +13,47 @@ ECHO가 설정되어 있지 않습니다.
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source main.tcl -notrace
-Command: synth_design -top main -part xa7a100tcsg324-1I
+source arm_tb.tcl -notrace
+Command: synth_design -top arm_tb -part xa7a100tcsg324-1I
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xa7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xa7a100t'
 INFO: [Device 21-403] Loading part xa7a100tcsg324-1I
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4568
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1320.004 ; gain = 440.410
----------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'CLK100MHZ', assumed default net type 'wire' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/main.v:27]
-INFO: [Synth 8-11241] undeclared symbol 'CPU_RESETN', assumed default net type 'wire' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/main.v:28]
-INFO: [Synth 8-6157] synthesizing module 'main' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/main.v:1]
-INFO: [Synth 8-6157] synthesizing module 'riscv_core' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_core.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_exec' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_exec.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_alu' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_alu.v:41]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_alu' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_alu.v:41]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_exec' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_exec.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_decode' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_decode.v:42]
-	Parameter SUPPORT_MULDIV bound to: 1 - type: integer 
-	Parameter EXTRA_DECODE_STAGE bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'riscv_decoder' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_decoder.v:43]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_decoder' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_decoder.v:43]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_decode' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_decode.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_mmu' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_mmu.v:42]
-	Parameter MEM_CACHE_ADDR_MIN bound to: -2147483648 - type: integer 
-	Parameter MEM_CACHE_ADDR_MAX bound to: -1879048193 - type: integer 
-	Parameter SUPPORT_MMU bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_mmu' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_mmu.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_lsu' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_lsu.v:42]
-	Parameter MEM_CACHE_ADDR_MIN bound to: -2147483648 - type: integer 
-	Parameter MEM_CACHE_ADDR_MAX bound to: -1879048193 - type: integer 
-INFO: [Synth 8-226] default block is never used [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_lsu.v:224]
-INFO: [Synth 8-6157] synthesizing module 'riscv_lsu_fifo' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_lsu.v:438]
-	Parameter WIDTH bound to: 36 - type: integer 
-	Parameter DEPTH bound to: 2 - type: integer 
-	Parameter ADDR_W bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_lsu_fifo' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_lsu.v:438]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_lsu' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_lsu.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_csr' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_csr.v:42]
-	Parameter SUPPORT_MULDIV bound to: 1 - type: integer 
-	Parameter SUPPORT_SUPER bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'riscv_csr_regfile' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_csr_regfile.v:41]
-	Parameter SUPPORT_MTIMECMP bound to: 1 - type: integer 
-	Parameter SUPPORT_SUPER bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_csr_regfile' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_csr_regfile.v:41]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_csr' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_csr.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_multiplier' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_multiplier.v:42]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_multiplier' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_multiplier.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_divider' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_divider.v:42]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_divider' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_divider.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_issue' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_issue.v:42]
-	Parameter SUPPORT_MULDIV bound to: 1 - type: integer 
-	Parameter SUPPORT_DUAL_ISSUE bound to: 1 - type: integer 
-	Parameter SUPPORT_LOAD_BYPASS bound to: 1 - type: integer 
-	Parameter SUPPORT_MUL_BYPASS bound to: 1 - type: integer 
-	Parameter SUPPORT_REGFILE_XILINX bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'riscv_pipe_ctrl' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_pipe_ctrl.v:41]
-	Parameter SUPPORT_LOAD_BYPASS bound to: 1 - type: integer 
-	Parameter SUPPORT_MUL_BYPASS bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_pipe_ctrl' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_pipe_ctrl.v:41]
-INFO: [Synth 8-6157] synthesizing module 'riscv_regfile' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_regfile.v:41]
-	Parameter SUPPORT_REGFILE_XILINX bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_regfile' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_regfile.v:41]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_issue' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_issue.v:42]
-INFO: [Synth 8-6157] synthesizing module 'riscv_fetch' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_fetch.v:42]
-	Parameter SUPPORT_MMU bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'riscv_fetch' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_fetch.v:42]
-INFO: [Synth 8-6155] done synthesizing module 'riscv_core' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_core.v:42]
-WARNING: [Synth 8-689] width (10) of port connection 'mem_d_req_tag_o' does not match port width (11) of module 'riscv_core' [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/main.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/main.v:1]
-WARNING: [Synth 8-6014] Unused sequential element csr_medeleg_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_csr_regfile.v:514]
-WARNING: [Synth 8-6014] Unused sequential element csr_scause_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_csr_regfile.v:520]
-WARNING: [Synth 8-6014] Unused sequential element csr_stval_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_csr_regfile.v:521]
-WARNING: [Synth 8-6014] Unused sequential element csr_sscratch_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_csr_regfile.v:523]
-WARNING: [Synth 8-6014] Unused sequential element result_e3_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_multiplier.v:154]
-WARNING: [Synth 8-6014] Unused sequential element npc_e1_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_pipe_ctrl.v:172]
-WARNING: [Synth 8-6014] Unused sequential element npc_e2_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_pipe_ctrl.v:252]
-WARNING: [Synth 8-6014] Unused sequential element npc_wb_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_pipe_ctrl.v:378]
-WARNING: [Synth 8-6014] Unused sequential element stall_q_reg was removed.  [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/riscv/riscv_fetch.v:144]
-WARNING: [Synth 8-3848] Net CLK100MHZ in module/entity main does not have driver. [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/main.v:27]
-WARNING: [Synth 8-3848] Net CPU_RESETN in module/entity main does not have driver. [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/sources_1/new/main.v:28]
-WARNING: [Synth 8-7129] Port issue_rd_i[4] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_rd_i[3] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_rd_i[2] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_rd_i[1] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_rd_i[0] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[31] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[30] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[29] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[28] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[27] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[26] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[25] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[24] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[23] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[22] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[21] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[20] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[19] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[18] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[17] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[16] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[15] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[14] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[13] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[12] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[11] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[10] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[9] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[8] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[7] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[6] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[5] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[4] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[3] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port issue_branch_target_i[2] in module riscv_pipe_ctrl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fetch_instr_exec_i in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_request_i in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_is_taken_i in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_is_not_taken_i in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[31] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[30] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[29] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[28] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[27] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[26] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[25] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[24] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[23] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[22] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[21] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[20] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[19] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[18] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[17] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[16] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[15] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[14] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[13] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[12] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[11] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[10] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[9] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[8] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[7] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[6] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[5] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[4] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[3] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[2] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[1] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_source_i[0] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_is_call_i in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_is_ret_i in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_is_jmp_i in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[31] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[30] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[29] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[28] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[27] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[26] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[25] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[24] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[23] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[22] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[21] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[20] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[19] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[18] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[17] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[16] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[15] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[14] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[13] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[12] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[11] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[10] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[9] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[8] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[7] in module riscv_issue is either unconnected or has no load
-WARNING: [Synth 8-7129] Port branch_exec_pc_i[6] in module riscv_issue is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1456.016 ; gain = 576.422
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1456.016 ; gain = 576.422
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1456.016 ; gain = 576.422
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1456.016 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/constrs_1/new/main.xdc]
-Finished Parsing XDC File [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/constrs_1/new/main.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.srcs/constrs_1/new/main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1554.641 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-지정된 경로를 찾을 수 없습니다.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1554.641 ; gain = 0.000
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xa7a100tcsg324-1I
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   64 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 11    
-	   3 Input   32 Bit       Adders := 3     
-	   2 Input    2 Bit       Adders := 2     
-	   2 Input    1 Bit       Adders := 2     
-+---XORs : 
-	   2 Input     32 Bit         XORs := 1     
-+---Registers : 
-	               66 Bit    Registers := 1     
-	               63 Bit    Registers := 1     
-	               36 Bit    Registers := 2     
-	               33 Bit    Registers := 2     
-	               32 Bit    Registers := 74    
-	               10 Bit    Registers := 3     
-	                6 Bit    Registers := 4     
-	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 6     
-	                1 Bit    Registers := 46    
-+---Muxes : 
-	   2 Input   66 Bit        Muxes := 1     
-	   2 Input   63 Bit        Muxes := 2     
-	   2 Input   36 Bit        Muxes := 1     
-	   3 Input   33 Bit        Muxes := 2     
-	   2 Input   33 Bit        Muxes := 4     
-	   2 Input   32 Bit        Muxes := 106   
-	   3 Input   32 Bit        Muxes := 4     
-	   4 Input   32 Bit        Muxes := 4     
-	  11 Input   32 Bit        Muxes := 2     
-	   7 Input   32 Bit        Muxes := 1     
-	  23 Input   32 Bit        Muxes := 1     
-	  14 Input   32 Bit        Muxes := 1     
-	   2 Input   16 Bit        Muxes := 2     
-	   2 Input   13 Bit        Muxes := 2     
-	   2 Input   12 Bit        Muxes := 1     
-	   2 Input   10 Bit        Muxes := 4     
-	   4 Input    8 Bit        Muxes := 2     
-	   2 Input    6 Bit        Muxes := 10    
-	   5 Input    6 Bit        Muxes := 1     
-	   7 Input    5 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 1     
-	   3 Input    5 Bit        Muxes := 1     
-	   7 Input    4 Bit        Muxes := 1     
-	  11 Input    4 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 1     
-	   9 Input    4 Bit        Muxes := 1     
-	  25 Input    4 Bit        Muxes := 1     
-	   3 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 2     
-	   4 Input    3 Bit        Muxes := 1     
-	   3 Input    2 Bit        Muxes := 1     
-	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 5     
-	  21 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 94    
-	   8 Input    1 Bit        Muxes := 2     
-	  22 Input    1 Bit        Muxes := 3     
-	   4 Input    1 Bit        Muxes := 1     
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 240 (col length:80)
-BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP mult_result_w, operation Mode is: A*B.
-DSP Report: operator mult_result_w is absorbed into DSP mult_result_w.
-DSP Report: operator mult_result_w is absorbed into DSP mult_result_w.
-DSP Report: Generating DSP mult_result_w, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator mult_result_w is absorbed into DSP mult_result_w.
-DSP Report: operator mult_result_w is absorbed into DSP mult_result_w.
-DSP Report: Generating DSP mult_result_w, operation Mode is: A*B.
-DSP Report: operator mult_result_w is absorbed into DSP mult_result_w.
-DSP Report: operator mult_result_w is absorbed into DSP mult_result_w.
-DSP Report: Generating DSP mult_result_w, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator mult_result_w is absorbed into DSP mult_result_w.
-DSP Report: operator mult_result_w is absorbed into DSP mult_result_w.
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
- Sort Area is  mult_result_w_3 : 0 0 : 2701 5008 : Used 1 time 0
- Sort Area is  mult_result_w_3 : 0 1 : 2307 5008 : Used 1 time 0
- Sort Area is  mult_result_w_0 : 0 0 : 2304 4330 : Used 1 time 0
- Sort Area is  mult_result_w_0 : 0 1 : 2026 4330 : Used 1 time 0
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|riscv_multiplier | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|riscv_multiplier | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|riscv_multiplier | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|riscv_multiplier | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
-
-Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |OBUF |    54|
-+------+-----+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1554.641 ; gain = 675.047
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 353 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1554.641 ; gain = 576.422
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1554.641 ; gain = 675.047
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1554.641 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1554.641 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-지정된 경로를 찾을 수 없습니다.
-Synth Design complete | Checksum: 4e0e262
+INFO: [Synth 8-7075] Helper process launched with PID 2064
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/4_Memory_Stage/Data_Memory.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/3_Execution_Stage/Exe_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/3_Execution_Stage/Exe_Stage_Reg.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/2_Instruction_Decode_Stage/ID_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/2_Instruction_Decode_Stage/ID_Stage_Reg.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/1_Instruction_Fetch_Stage/IF_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/1_Instruction_Fetch_Stage/IF_Stage_Reg.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/4_Memory_Stage/Mem_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/4_Memory_Stage/Mem_Stage_Reg.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/SRAM_Controller.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/SRAM_Controller64.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Status_Register.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/5_Write_Back_Stage/WB_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/3_Execution_Stage/alu.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/common modules/f_r_register.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/common modules/f_register.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/1_Instruction_Fetch_Stage/instruction_memory.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/common modules/r_register.v:1]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1319.891 ; gain = 439.086
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v:1]
+INFO: [Synth 8-10285] module 'Cache_Controller' is ignored due to previous errors [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v:102]
+INFO: [Synth 8-9084] Verilog file 'D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v' ignored due to errors
+ERROR: [Synth 8-439] module 'arm_tb' not found
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1427.309 ; gain = 546.504
+---------------------------------------------------------------------------------
+RTL Elaboration failed
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1554.641 ; gain = 1085.273
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1554.641 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.runs/synth_1/main.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  4 03:18:01 2024...
+8 Infos, 0 Warnings, 0 Critical Warnings and 22 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  8 13:49:37 2024...

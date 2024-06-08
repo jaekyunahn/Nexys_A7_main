@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.runs/synth_1'
+HD_PWD='D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+EAStep vivado -log arm_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_tb.tcl

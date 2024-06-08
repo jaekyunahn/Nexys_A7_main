@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat Jun  8 13:49:17 2024
+# Process ID: 12584
+# Current directory: D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.runs/synth_1
+# Command line: vivado.exe -log arm_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_tb.tcl
+# Log file: D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.runs/synth_1/arm_tb.vds
+# Journal file: D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.runs/synth_1\vivado.jou
+# Running On: DESKTOP-VTPIOT7, OS: Windows, CPU Frequency: 3793 MHz, CPU Physical cores: 16, Host memory: 102954 MB
+#-----------------------------------------------------------
+source arm_tb.tcl -notrace
+Command: synth_design -top arm_tb -part xa7a100tcsg324-1I
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xa7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xa7a100t'
+INFO: [Device 21-403] Loading part xa7a100tcsg324-1I
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2064
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/4_Memory_Stage/Data_Memory.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/3_Execution_Stage/Exe_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/3_Execution_Stage/Exe_Stage_Reg.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/2_Instruction_Decode_Stage/ID_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/2_Instruction_Decode_Stage/ID_Stage_Reg.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/1_Instruction_Fetch_Stage/IF_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/1_Instruction_Fetch_Stage/IF_Stage_Reg.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/4_Memory_Stage/Mem_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/4_Memory_Stage/Mem_Stage_Reg.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/SRAM_Controller.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/SRAM_Controller64.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Status_Register.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/5_Write_Back_Stage/WB_Stage.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/3_Execution_Stage/alu.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/common modules/f_r_register.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/common modules/f_register.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/1_Instruction_Fetch_Stage/instruction_memory.v:1]
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/common modules/r_register.v:1]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1319.891 ; gain = 439.086
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-9263] cannot open include file 'configs.v' [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v:1]
+INFO: [Synth 8-10285] module 'Cache_Controller' is ignored due to previous errors [D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v:102]
+INFO: [Synth 8-9084] Verilog file 'D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.srcs/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v' ignored due to errors
+ERROR: [Synth 8-439] module 'arm_tb' not found
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1427.309 ; gain = 546.504
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+8 Infos, 0 Warnings, 0 Critical Warnings and 22 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  8 13:49:37 2024...

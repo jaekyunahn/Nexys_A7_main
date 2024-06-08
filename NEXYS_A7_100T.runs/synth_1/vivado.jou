@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Tue Jun  4 03:17:25 2024
-# Process ID: 23440
-# Current directory: D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.runs/synth_1
-# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
-# Log file: D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.runs/synth_1/main.vds
-# Journal file: D:/Project/FPGA/NEXYS_A7_100T/NEXYS_A7_100T.runs/synth_1\vivado.jou
+# Start of session at: Sat Jun  8 13:49:17 2024
+# Process ID: 12584
+# Current directory: D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.runs/synth_1
+# Command line: vivado.exe -log arm_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_tb.tcl
+# Log file: D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.runs/synth_1/arm_tb.vds
+# Journal file: D:/Project/AllinOne/Nexys_A7_main/NEXYS_A7_100T.runs/synth_1\vivado.jou
 # Running On: DESKTOP-VTPIOT7, OS: Windows, CPU Frequency: 3793 MHz, CPU Physical cores: 16, Host memory: 102954 MB
 #-----------------------------------------------------------
-source main.tcl -notrace
+source arm_tb.tcl -notrace

@@ -1,129 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xa7a100tcsg324-1I" LaunchTime="1717438642">
-  <File Type="PA-TCL" Name="main.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
-  <File Type="RDS-RDS" Name="main.vds"/>
-  <File Type="RDS-UTIL" Name="main_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="main.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xa7a100tcsg324-1I" LaunchTime="1717822154">
+  <File Type="PA-TCL" Name="arm_tb.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="arm_tb_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="arm_tb_reports.tcl"/>
+  <File Type="RDS-RDS" Name="arm_tb.vds"/>
+  <File Type="RDS-UTIL" Name="arm_tb_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="arm_tb_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="arm_tb.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="arm_tb_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="arm_tb_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_defs.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/Cache.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_alu.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/Cache_Controller.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_core.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/4_Memory_Stage/Data_Memory.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_csr.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/3_Execution_Stage/Exe_Stage.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_csr_regfile.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/3_Execution_Stage/Exe_Stage_Reg.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_decode.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/Forwarding_Unit.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_decoder.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/Hazard_Detection_Unit.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_divider.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/2_Instruction_Decode_Stage/ID_Stage.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_exec.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/2_Instruction_Decode_Stage/ID_Stage_Reg.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_fetch.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/1_Instruction_Fetch_Stage/IF_Stage.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_issue.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/1_Instruction_Fetch_Stage/IF_Stage_Reg.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_lsu.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/4_Memory_Stage/Mem_Stage.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_mmu.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/4_Memory_Stage/Mem_Stage_Reg.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_multiplier.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/SRAM_Controller.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_pipe_ctrl.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/SRAM_Controller64.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_regfile.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/Status_Register.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_xilinx_2r1w.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/5_Write_Back_Stage/WB_Stage.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/3_Execution_Stage/alu.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/configs.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/arm.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/2_Instruction_Decode_Stage/condition_check.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/2_Instruction_Decode_Stage/control_unit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/common modules/f_r_register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/common modules/f_register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/1_Instruction_Fetch_Stage/instruction_memory.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/common modules/mux.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/common modules/mux4.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/common modules/r_register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/2_Instruction_Decode_Stage/register_file.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/3_Execution_Stage/val2_generator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/arm_tb.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -132,12 +230,21 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/main.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/riscv/riscv_trace_sim.v">
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/SRAM.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ARM9/Additional_Modules/SRAM64.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -147,7 +254,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="main"/>
+      <Option Name="TopModule" Val="arm_tb"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
